@@ -1,0 +1,35 @@
+Titulo
+Bom, como trabalho final da disciplina de processamento digital de imagens eu escolhi
+falar e implementar o assunto do artigo 4 que é um sistema para detecção automática
+de placas de veículos. 
+
+Introdução
+Segundo o artigo, com o grande volume de carros crescendo ano, após ano as autoridades
+investem tecnlogia para detecção de caracteres em veiculos, já em 1976 foi desenvolvido 
+a primeira tecnica chamada de Reconhecimento Automatico de numeros em placas veiculos.
+Um protótipo só conseguiu ser implementado em 1979. 
+Diversas técnicas foram criadas ao longo do tempo, como o OCR, RBF, PNN e com lógica fuzzy. 
+O OCR é o algoritmo que é mais utilizado, em pesquisas recentes ele também é o mais sensivel 
+a indentificar caracteres em geral.  
+
+Metodologia
+Sucintamente a metodologia consiste em Capturar a imagem, identificar as bordas,
+filtrar a imagem de alguma forma (Mexican Hat por exemplo), 
+Extrair a placa do resto da imagem, Dividir os caracteres e finalmente reconhecer
+os caracteres como um todo. 
+
+Processo
+Foi utilizado o programa MatLab por conta de já possuir o OCR implementado, se fosse
+utilizado o octave teria que se importar uma biblioteca externa. 
+A imagem é então convertida para tons de cinza, embora no artigo esteja para deixar ela
+preto e branco, o algortimo funcionou melhor desta forma, é então aplicado o filtro
+Chapeu Mexicano para retirar ruidos da imagem, e ao invés de inverter a imagem foi 
+utilizado a função para detecção de bordas na image 3, após isso é realizado a 
+detecção individual dos caracteres, e na imagem 5 é expandida as caixas para a 
+identificação de texto. E em cima da imagem 5 está a placa do veiculo reconhecida. 
+  
+Conclusão
+A detecção de caracteres em imagens sem movimento são bastante simplificadas pelos
+algoritmos atuais, especialmente pelo de detectão de borda e pelo OCR, torna essa 
+tecnologia de facil acesso para as autoridades poderem controlar o trafego e também
+possíveis irregularidas no transito. 
